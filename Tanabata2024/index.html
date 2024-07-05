@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale = 1.0">
+    <title> Tanabata 2024 </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <button type="submit" class="btn" >
+            <a href="MakeAWish.html" target="_blank">
+                <img src="/Users/phoodit/Library/CloudStorage/OneDrive-KamnoetvidyaScienceAcademy/Tanabata2024/wishbutton_animated-ezgif.com-crop.gif" alt="Delete image" loop="infinite" width="100%" >
+            </a>
+        </button>
+        <button type="submit" class="story_btn" onclick="openPopup_story()">
+            <img src="/Users/phoodit/Library/CloudStorage/OneDrive-KamnoetvidyaScienceAcademy/Tanabata2024/final/storybutton_animated.gif" alt="" width="100%">
+        </button>
+        <!-- <div class="overlay" id="overlay"></div> -->
+        <!-- <button type = "submit" class = "btn" onclick="openPopup()"> Make a wish </button> -->
+
+
+        <!-- story -->
+        <div class="popupstory" id="popupstory">
+            <div id="gallerywrapper">
+                <div id="gallery">
+                    <div id="pic1">
+                        <img src="Assets/ST4.png" height="300" width="430" alt="Image 4">
+                        <a class="previous" href="#pic12">&lt;</a>
+                        <a class="next" href="#pic2">&gt;</a>
+                        <h4>ตึ้ง!</h4>
+                    </div>
+                    <div id="pic2">
+                        <img src="Assets/ST5.png" height="300" width="430" alt="Image 5">
+
+                        <h4>วันทานาบาตะ หรือวันที่ 7 เดือน 7 เป็นวันที่เส้นทางความรักที่ดูเป็นไปไม่ได้ของ
+                            เจ้าหญิงทอผ้าโอริฮิเมะ
+                            และชายเลี้ยงวัวฮิโกโบชิ ได้เดินทางมาบรรจบกันปีละครั้ง</h4>
+                        <a class="previous" href="#pic1">&lt;</a>
+                        <a class="next" href="#pic3">&gt;</a>
+                    </div>
+                    <div id="pic3">
+                        <img src="Assets/ST1.png" height="300" width="430" alt="Image 1">
+
+                        <h4>เมื่อทั้งสองตกหลุมรักกันก็ได้เริ่มละทิ้งหน้าที่ของตน
+                            พอบิดาของโอริฮิเมะที่เป็นผู้ปกครองสวรรค์รู้เข้าก็โกรธมาก
+                            จึงแยกทั้งคู่ออกจากกันโดยมีแม่น้ำสวรรค์หรือทางช้างเผือกคั่นกลาง หญิงสาวโศกเศร้าเสียใจ
+                            บิดาจึงเห็นใจจึงอนุญาตให้ทั้งสองมาพบกันได้ปีละ 1 ครั้งในวันนี้
+                            โดยนกคาซาซากิจะมาเป็นสะพานให้ทั้งสองได้ข้ามทางช้างเผือกมาพบกัน
+                            ทั้งคู่จึงกลับมาตั้งใจทำงานและเฝ้ารอให้ถึงวันทานาบาตะ</h4>
+                        <a class="previous" href="#pic2">&lt;</a>
+                        <a class="next" href="#pic4">&gt;</a>
+                    </div>
+                    <div id="pic4">
+                        <img src="Assets/ST1.png" height="300" width="430" alt="Image 1">
+
+                        <h4>ในปีนี้คุณก็ได้มาเฉลิมฉลองเทศกาลวันทานาบาตะ ณ เมือง 城月
+                            เป็นครั้งแรกที่คุณได้ออกมาเที่ยวเทศกาลแบบนี้
+                            สองข้างทางเต็มไปด้วยผู้คน อาหาร และสิ่งต่าง ๆ มากมาย</h4>
+                        <a class="previous" href="#pic3">&lt;</a>
+                        <a class="next" href="#pic5">&gt;</a>
+                    </div>
+                    <div id="pic5">
+                        <img src="Assets/ST2.png" height="300" width="430" alt="Image 2">
+
+                        <h4>“แต่มาเที่ยวงานทานาบาตะทั้งที จะให้มาคนเดียวก็คงจะเหงาไปหน่อยสินะ” ทันใดนั้นเอง
+                            เพื่อนที่คุณนัดไว้ก็มาถึงพอดี</h4>
+                        <a class="previous" href="#pic4">&lt;</a>
+                        <a class="next" href="#pic6">&gt;</a>
+                    </div>
+                    <div id="pic6">
+                        <img src="Assets/ST2.png" height="300" width="430" alt="Image 2">
+                        <h4>“งั้น พวกเราไปทำอะไรกันดี” เพื่อนถาม ในงานก็มีกิจกรรมมากมาย วันนี้คุณจะเลือกอะไรดีนะ</h4>
+                        <br>
+                        <a class="choice1" href="#pic7">ไปพับโอริกามิกันมั้ย</a>
+                        <a class="choice2" href="#pic9">ไปเล่นดอกไม้ไฟกัน</a>
+                        <a class="choice3" href="#pic8">ยังไม่ค่อยอยากเล่นอะไรเลย ไปหาของกินดีกว่า</a>
+                    </div>
+                    <div id="pic9">
+                        <img src="Assets/ST6.png" height="300" width="430" alt="Image 3">
+
+                        <h4> คุณและเพื่อนวิ่งไปซื้อดอกไม้ไฟและจุดมันด้วยกัน
+                            คงจะไม่บ่อยนักที่พวกเรามีโอกาสได้มานั่งเล่นดอกไม้ไฟในงานเทศกาลแบบนี้ พอจุดดอกไม้ไฟ
+                            แสงที่สดใสก็เปล่งประกายออกมา “ดอกไม้ไฟจะส่องสว่างแบบนี้ไปได้นานอีกสักเท่าไหร่กันนะ”
+                            คุณพร่ำเพ้อกับตัวเอง </h4>
+                        <a class="previous" href="#pic6">&lt;</a>
+                        <a class="next" href="#pic11">&gt;</a>
+                    </div>
+
+                    <div id="pic11">
+                        <img src="Assets/ST6.png" height="300" width="430" alt="Image 3">
+
+                        <h4>"เสร็จแล้วเราไปขอพรกันนะ"
+                            พวกคุณที่รู้อยู่แก่ใจว่ามีเรื่องหนักใจกันทั้งคู่จึงได้มุ่งหน้าไปขอพรกัน</h4>
+                        <a class="previous" href="#pic9">&lt;</a>
+                        <a class="next" href="#pic12">&gt;</a>
+                    </div>
+
+                    <div id="pic7">
+                        <img src="Assets/ST3.png" height="300" width="430" alt="Image 3">
+
+                        <h4> คุณและเพื่อนพับกระดาษโอริกามิด้วยกัน แม้โอริกามิจะหาพับได้ทั่วไป
+                            แต่พวกคุณก็แทบจะไม่มีโอกาสได้ทำทำงานฝีมืออะไรแบบนี้เลย
+                            “เราไม่ได้ทำอะไรแบบนี้มานานแค่ไหนกันนะ”
+                            คุณคิด</h4>
+                        <a class="previous" href="#pic6">&lt;</a>
+                        <a class="next" href="#pic17">&gt;</a>
+                    </div>
+                    <div id="pic17">
+                        <img src="Assets/ST3.png" height="300" width="430" alt="Image 3">
+
+                        <h4> “นั่นน่ะสิ งั้นพับเสร็จเราไปขอพรกันดีมั้ย”
+                            พวกคุณที่รู้อยู่แก่ใจว่ามีเรื่องหนักใจกันทั้งคู่จึงได้มุ่งหน้าไปขอพรกัน</h4>
+                        <a class="previous" href="#pic7">&lt;</a>
+                        <a class="next" href="#pic12">&gt;</a>
+                    </div>
+
+                    <div id="pic8">
+                        <img src="Assets/ST12.png" height="300" width="430" alt="Image 5">
+                        <h4>พวกคุณเดินหาของกินไปเรื่อย ๆ จนได้มาเจอกับร้าน 3 ร้านที่ไม่ค่อยได้กินบ่อยนัก
+                            แล้วเพื่อนของก็ได้ถามขึ้นว่า “กินไรดี” </h4>
+                        <br>
+                        <a class="choice4" href="#pic18">ยากิโซบะ</a>
+                        <a class="choice5" href="#pic15">โซเม็ง</a>
+                        <a class="choice6" href="#pic16">ทาโกะยากิ</a>
+                    </div>
+                    <div id="pic18">
+                        <img src="Assets/ST7.png" height="300" width="430" alt="Image 5">
+
+                        <h4>“เอายากิโซบะละกัน อยากกินมานานแล้ว” เพื่อนของคุณตามใจคุณทุกอย่าง
+                            ทั้งสองคนจึงไปต่อแถวซื้อยากิโซบะ
+                            แล้วมาหาที่นั่งกินข้าวกัน “คืนนี้พระจันทร์สวยดีแฮะ” คุณคิดในใจ จึงได้ถามเพื่อนของคุณว่า
+                            “แกว่า
+                            ถ้าเราขอพรในวันทานาบาตะไปมันจะเป็นจริงมั้ย” </h4>
+                        <a class="previous" href="#pic8">&lt;</a>
+                        <a class="next" href="#pic10">&gt;</a>
+                    </div>
+                    <div id="pic15">
+                        <img src="Assets/ST7.png" height="300" width="430" alt="Image 5">
+
+                        <h4>“เอาโซเม็งละกัน อยากกินมานานแล้ว” เพื่อนของคุณตามใจคุณทุกอย่าง
+                            ทั้งสองคนจึงไปต่อแถวซื้อโซเม็ง
+                            แล้วมาหาที่นั่งกินข้าวกัน “คืนนี้พระจันทร์สวยดีแฮะ” คุณคิดในใจ จึงได้ถามเพื่อนของคุณว่า
+                            “แกว่า
+                            ถ้าเราขอพรในวันทานาบาตะไปมันจะเป็นจริงมั้ย” </h4>
+                        <a class="previous" href="#pic8">&lt;</a>
+                        <a class="next" href="#pic10">&gt;</a>
+                    </div>
+                    <div id="pic16">
+                        <img src="Assets/ST7.png" height="300" width="430" alt="Image 5">
+
+                        <h4>“เอาทาโกะยากิละกัน อยากกินมานานแล้ว” เพื่อนของคุณตามใจคุณทุกอย่าง
+                            ทั้งสองคนจึงไปต่อแถวซื้อทาโกะยากิ
+                            แล้วมาหาที่นั่งกินข้าวกัน “คืนนี้พระจันทร์สวยดีแฮะ” คุณคิดในใจ จึงได้ถามเพื่อนของคุณว่า
+                            “แกว่า
+                            ถ้าเราขอพรในวันทานาบาตะไปมันจะเป็นจริงมั้ย” </h4>
+                        <a class="previous" href="#pic8">&lt;</a>
+                        <a class="next" href="#pic10">&gt;</a>
+                    </div>
+                    <div id="pic10">
+                        <img src="Assets/ST8.png" height="300" width="430" alt="Image 5">
+
+                        <h4>“นั่นน่ะสิ งั้นกินข้าวเสร็จเราไปขอพรกันดีมั้ย”
+                            พวกคุณที่รู้อยู่แก่ใจว่ามีเรื่องหนักใจกันทั้งคู่จึงได้มุ่งหน้าไปขอพรกัน </h4>
+                        <a class="previous" href="#pic8">&lt;</a>
+                        <a class="next" href="#pic12">&gt;</a>
+                    </div>
+                    <div id="pic12">
+                        <img src="Assets/ST9.png" height="300" width="430" alt="Image 5">
+
+                        <h4>ระหว่างทาง คุณและเพื่อน ก็ได้คุยเล่นกันอย่างสนุกสนานอย่างเคย แต่ด้วยความพลุ่กพล่านในงาน
+                            คุณก็ได้บังเอิญไปชนกับคน ๆ หนึ่งเข้า “โอ้ะ ขอโทษจริง ๆ นะคะ/ครับ คุณเป็นอะไรมั้..”
+                            คุณถามด้วยความเป็นห่วงพลางเหลือบมองขึ้นไป “ไม่เป็นไรเลย” เสียงพูดนั้นดังขึ้น
+                            คุณแทบไม่เชื่อตัวเองด้วยซ้ำว่าวัวที่เห็นอยู่ตรงหน้ากำลังพูดภาษาคนกับคุณอยู่ </h4>
+                        <a class="previous" href="#pic11">&lt;</a>
+                        <a class="next" href="#pic13">&gt;</a>
+                    </div>
+                    <div id="pic13">
+                        <img src="Assets/ST10.png" height="300" width="430" alt="Image 5">
+
+                        <h4>“ว่าแต่ พวกเจ้าจะรู้ได้ยังไงว่ามันจะเป็นไปไม่ได้ ถ้ายังไม่ได้ลองเลยด้วยซ้ำน่ะ
+                            เชื่อมั่นในตัวเองเข้าไว้สิ”
+                            วัวประหลาดตัวนั้นพูดขึ้นเหมือนรับรู้ได้ถึงความคิดอันสิ้นหวังของคุณ
+                            คุณทั้งคู่ยืนงงกันอยู่สักพัก ในขณะที่กำลังมองวัวตัวนั้นเดินจากไปอย่างช้า ๆ </h4>
+                        <a class="previous" href="#pic12">&lt;</a>
+                        <a class="next" href="#pic14">&gt;</a>
+                    </div>
+                    <div id="pic14">
+                        <img src="Assets/ST11.png" height="300" width="430" alt="Image 5">
+
+                        <h4>คุณและเพื่อนกำลังเดินต่อเพื่อไปขอพรอย่างที่ตั้งใจไว้ “เมื่อกี้
+                            พวกเราสติหลุดกันไปแล้วหรือเปล่านะ
+                            วัวพูดได้งั้นเหรอ?!!” คุณและเพื่อนพูดพร้อมกันแบบไม่ได้นัดหมาย แต่คงไม่เป็นไรหรอกมั้ง
+                            นี่อาจจะเป็นแค่ความฝันก็ได้ ว่าแล้วก็ไปขอพรในวันทานาบาตะกันดีกว่า </h4>
+                        <a class="previous" href="#pic13">&lt;</a>
+                        <a class="next" href="#pic1">&gt;</a>
+                    </div>
+                </div>
+            </div>
+            <div class="callout" data-closable>
+                <button onclick="closePopup_story()" id="closepopupstory" class="close-button"
+                    aria-label="Dismiss alert" type="button" data-close>
+                    Close
+                </button>
+            </div>
+        </div>
+        <div class="optionTazaku" id="optionTazaku">
+            <p> Card color: </p>
+            <p> </p><br>
+            <span id="1" onclick="color(this)" class="cl cl_1"></span>
+            <span id="2" onclick="color(this)" class="cl cl_2"></span>
+            <span id="3" onclick="color(this)" class="cl cl_3"></span>
+            <span id="4" onclick="color(this)" class="cl cl_4"></span>
+            <span id="5" onclick="color(this)" class="cl cl_5"></span>
+            <span id="6" onclick="color(this)" class="cl cl_6"></span>
+            <span id="7" onclick="color(this)" class="cl cl_7"></span>
+            <span id="8" onclick="color(this)" class="cl cl_8"></span>
+        </div>
+    </div>
+    <script src="script.js"> </script>
+</body>
+
+</html>

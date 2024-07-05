@@ -1,0 +1,442 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+@font-face {
+    font-family: itim;
+    src: url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+    /*src: url('https://pctkpp.github.io/tnbt2022/fontNyashi.otf');*/
+}
+
+@font-face {
+    font-family: FC rainbow;
+    src: url('https://pctkpp.github.io/tnbt2022/font/fc-rainbow.otf');
+    unicode-range: U+E00–E7F;
+}
+
+
+html {
+    height: 100%;
+}
+
+body {
+    background-image:
+        url(/Users/phoodit/Library/CloudStorage/OneDrive-KamnoetvidyaScienceAcademy/Tanabata2024/final/foreframe.png),
+        url(/Users/phoodit/Library/CloudStorage/OneDrive-KamnoetvidyaScienceAcademy/Tanabata2024/final/moon_animated-ezgif.com-crop.gif),
+        url(/Users/phoodit/Library/CloudStorage/OneDrive-KamnoetvidyaScienceAcademy/Tanabata2024/final/bamboofront_animated.gif),
+        url(/Users/phoodit/Library/CloudStorage/OneDrive-KamnoetvidyaScienceAcademy/Tanabata2024/final/backframe.png),
+        url(/Users/phoodit/Library/CloudStorage/OneDrive-KamnoetvidyaScienceAcademy/Tanabata2024/final/bambooback.png),
+        url(/Users/phoodit/Library/CloudStorage/OneDrive-KamnoetvidyaScienceAcademy/Tanabata2024/final/sea_animated.gif),
+        url(/Users/phoodit/Library/CloudStorage/OneDrive-KamnoetvidyaScienceAcademy/Tanabata2024/final/background.png);
+    background-size: cover, 25%, cover, cover, cover,cover,cover;
+    background-position: top, right top, top, top, top,top,top;
+    background-attachment: scroll,fixed,scroll,scroll,scroll,scroll,scroll;
+    height: 243vh;
+    margin: 0;
+    color: #372791;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    flex-direction: column;
+}
+
+.btn {
+    display: inline;
+    margin-top: 300px;
+    width: 250px;
+    border: 0;
+    background: none;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.story_btn {
+    display: inline;
+    width: 250px;
+    border: 0;
+    background: none;
+    cursor: pointer;
+}
+
+.popup {
+    width: 4500px;
+    text-align: center;
+    background-color: #d1585f;
+    border-radius: 15px;
+    top: 30%;
+    left: 50%;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    padding: 10px 30px 30px;
+    visibility: hidden;
+    z-index: 102;
+}
+
+.titlecard {
+    color: white;
+    font-family: 'FC rainbow', 'Nyashi', 'Hachi Maru Pop', 'Mali', cursive;
+    z-index: 101;
+}
+
+.open-popup {
+    visibility: visible;
+}
+
+a {
+    width: 100%;
+    height: 100%;
+    color: #372791;
+    text-decoration: none;
+
+}
+
+/* .overlay {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    opacity: 70%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    visibility: hidden;
+    z-index: 101;
+} */
+
+.ovl {
+    visibility: visible;
+}
+
+input[type=text] {
+    font-family: 'FC rainbow', 'Nyashi', 'Hachi Maru Pop', 'Mali', cursive;
+    font-size: 1em;
+    height: 40px;
+    width: 300px;
+    border: none;
+    border-bottom: 2px solid #ff7e0d;
+    padding: 0px 10px;
+    margin-bottom: 30px;
+    line-height: 2.5em !important;
+}
+
+.popup button {
+    font-family: 'FC rainbow', 'Nyashi', 'Hachi Maru Pop', 'Mali', cursive;
+    height: 40px;
+    border-radius: 20px;
+    border-color: purple;
+    color: #372791;
+    background-color: wheat;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    font-size: 1em;
+}
+
+.optionTazaku {
+    width: 90%;
+    height: 25%;
+    top: 87.5%;
+    left: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+    text-align: center;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #fcf1e5eb;
+    visibility: hidden;
+    z-index: 102;
+}
+
+.cl {
+    width: 50px;
+    height: 50px;
+    padding: 20px 40px;
+    border-radius: 5px;
+    border-color: black;
+    margin-bottom: 2px;
+    background-color: var(--color);
+    cursor: pointer;
+    margin: 10px;
+}
+
+.cl_1 {
+    --color: black;
+    border-color: grey;
+}
+
+.cl_2 {
+    --color: #fdb7c2;
+    border-color: grey
+}
+
+.cl_3 {
+    --color: #a1e9ff;
+    border-color: grey
+}
+
+.cl_4 {
+    --color: #3f3152;
+    border-color: grey
+}
+
+.cl_5 {
+    --color: #fbe1a4;
+    border-color: grey
+}
+
+.cl_6 {
+    --color: #acf4b4;
+    border-color: grey
+}
+
+.cl_7 {
+    --color: #d1585f;
+    border-color: grey
+}
+
+.cl_8 {
+    --color: #f5f4f0;
+    border-color: grey
+}
+
+.open-option {
+    visibility: visible;
+}
+
+.bg_bottom {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.random {
+    margin-top: 2300px;
+    z-index: 200;
+    font-size: 2em;
+    position: center;
+    left: 50%;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gallery text {
+    font-family: FC rainbow;
+}
+
+.popupstory {
+    width: 85%;
+    height: 300 px;
+    background-color: #f5f4f0;
+    border-radius: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    padding: 15px 30px 15px;
+    visibility: hidden;
+    z-index: 300;
+}
+
+.open-popup_story {
+    visibility: visible;
+}
+
+.close {
+    background: red;
+    color: #FFFFFF;
+    line-height: 25px;
+    position: absolute;
+    right: -12px;
+    text-align: center;
+    top: -10px;
+    width: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    -moz-box-shadow: 1px 1px 3px #000;
+    -webkit-box-shadow: 1px 1px 3px #000;
+    box-shadow: 1px 1px 3px #000;
+}
+
+.close:hover {
+    background: #f5f4f0;
+}
+
+.choice1 {
+    background-color: #372791;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.choice2 {
+    background-color: #372791;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.choice3 {
+    background-color: #372791;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.choice4 {
+    background-color: #372791;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.choice5 {
+    background-color: #372791;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.choice6 {
+    background-color: #372791;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#gallerywrapper {
+    width: 640px;
+    height: 450px;
+    margin: 0 auto;
+    position: relative;
+    font-family: verdana, arial, sans-serif;
+}
+
+#gallerywrapper #gallery {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 450px;
+    width: 640px;
+    overflow: hidden;
+    text-align: center;
+}
+
+#gallerywrapper #gallery div {
+    width: 640px;
+    height: 900px;
+    padding-top: 10px;
+    position: relative;
+}
+
+#gallerywrapper #gallery div img {
+    clear: both;
+    display: block;
+    margin: 0 auto;
+    border: 0;
+}
+
+#gallerywrapper #gallery div h3 {
+    padding: 10px 0 0 0;
+    margin: 0;
+    font-size: 18px;
+}
+
+#gallerywrapper #gallery div p {
+    padding: 5px 0;
+    margin: 0;
+    font-size: 18px;
+    line-height: 18px;
+}
+
+#gallery .previous {
+    display: block;
+    position: sticky;
+    bottom: 10px;
+    left: 6%;
+    border-radius: 6px;
+    width: 2ex;
+    height: 8px;
+    float: left;
+    margin-left: 10px;
+    text-decoration: none;
+    padding: 10px;
+    background-color: #61606059;
+    cursor: pointer;
+    line-height: 0.5;
+}
+
+#gallery .next {
+    display: block;
+    position: sticky;
+    bottom: 10px;
+    right: 6%;
+    border-radius: 6px;
+    width: 2ex;
+    height: 8px;
+    float: right;
+    margin-right: 10px;
+    text-decoration: none;
+    padding: 10px;
+    background-color: #61606059;
+    cursor: pointer;
+    line-height: 0.5;
+}
+
+h4 {
+    color: #3f3152;
+    font-family: itim;
+    text-align: center;
+}
+
+.wishButton {
+    background: none;
+    margin-left: auto;
+    margin-right: auto;
+    border-width: 0;
+    border-style: solid;
+    cursor: pointer;
+}
+
+
+
+.randomWish {
+    height: 30%;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50px;
+    display: block;
+    background-color: #a1e9ff;
+}
+
+.Rand {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+    height: 20px;
+}
+
+
+.Rand.show {
+    visibility: visible;
+}
+
+/* a{
+    color:white;
+    font-family: itim;
+} */

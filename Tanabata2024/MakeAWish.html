@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tanabata 2024</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body
+    style="background-image: url(/Users/phoodit/Library/CloudStorage/OneDrive-KamnoetvidyaScienceAcademy/Tanabata2024/pic/bg1.png);">
+    <!-- make a wish -->
+    <div class="container">
+        <div class="popup" id="popup">
+            <form name='submit-to-google-sheet' id="tanzaku">
+                <h2 class="titlecard"> Make a wish! </h2>
+                <div class="inputbox">
+                    <input name="wish" type="text" id="wish" placeholder="Your wishes" required />
+                </div>
+                <div class="inputbox">
+                    <input name="name" type="text" id="name" placeholder="Your name" required />
+                </div>
+                <input type="submit" name="submit" class="confirm_btn" onclick="closePopup()">
+            </form>
+        </div>
+        <script>
+
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbzzZiLp7qBSYrREjOiGs_B4fQW86yZ-qF9FS4ZGBGlki0wEWS6H5pqZ8GbVdjfD_g0F4A/exec';
+            const form = document.forms['submit-to-google-sheet'];
+            form.addEventListener('submit', e => {
+                e.preventDefault()
+                fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                    .then(response => alert("Your wish has been submitted. Good luck!"))
+                    .catch(error => console.error('error!', error.message))
+            })
+
+            document.addEventListener('DOMContentLoaded', function () {
+                const spreadsheetId = '1veaKWvAWCSAk6ZGelvUm6Wvnn8bE0_o-OwJCfs8n_-I'; // Replace with your actual spreadsheet ID
+                const sheetName = 'Sheet1'; // Replace with your actual sheet name
+                const apiKey = 'AIzaSyBWVK47xE84TfpDsPEeejL3IzSj11ZczM0'; // Replace with your Google API key
+
+                const url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${sheetName}?key=${apiKey}`;
+
+                const fetchButton = document.getElementById('random');
+                const dataContainer = document.getElementById('wishes');
+
+                fetchButton.addEventListener('click', function () {
+                    fetch(url)
+                        .then(response => response.json())
+                        .then(data => {
+                            const values = data.values;
+
+                            if (values.length > 1) {
+                                const randomIndex = Math.floor(Math.random() * (values.length - 1)) + 1; // Random index from 1 to values.length-1
+                                const randomRow = values[randomIndex];
+
+                                // Clear previous content
+                                dataContainer.innerHTML = '';
+
+                                // Display random data
+
+                                const p = document.createElement('p');
+                                p.textContent = randomRow[0];
+                                dataContainer.appendChild(p);
+                            } else {
+                                dataContainer.innerHTML = 'No data available.';
+                            }
+                        })
+                        .catch(error => {
+                            console.error('Error fetching data:', error);
+                            dataContainer.innerHTML = 'Error fetching data. Please try again later.';
+                        });
+                });
+            });
+
+            function myFunction(){
+                var x = document.getElementById("RandomWish");
+                if (x.style.display === "none") {
+                    x.style.display = "block";
+                } else {
+                    x.style.display = "none";
+                }
+            }
+        </script>
+
+        <!-- see other wish -->
+        <button id="wish" class="wishButton" onclick="myFunction()">
+            <img src="/Users/phoodit/Library/CloudStorage/OneDrive-KamnoetvidyaScienceAcademy/Tanabata2024/wishbutton_animated-ezgif.com-crop.gif"
+                 width=300px height=300px>
+
+        </button>
+        <div class="randomWish" id="RandomWish">
+            <span id="wishes" class="wishText"></span>
+            <button id="random" class="Rand"> Refresh </button>
+        </div>
+        
+
+        <!-- <img src="" class="bg_bottom" onclick="cardopen()" alt = "..." /> -->
+    </div>
+</body>
+
+</html>
