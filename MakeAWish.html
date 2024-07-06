@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tanabata 2024</title>
+    <link rel="stylesheet" href="MakeWish-style.css">
+</head>
+
+    <button class="SUBMIT" onclick="popup()"></button>
+    <button class="WISHES" onclick="popupWish()"></button>
+    <!-- make a wish -->
+    <div class="container">
+        <div class="popup" id="popup">
+            <div class="frame">
+                <img src="Frame+card/IMG_5680.png" alt="Frame 1">
+            </div>
+            <div class="frame">
+                <img src="Frame+card/IMG_5681.jpeg" alt="Frame 2">
+            </div>
+            <div class="frame">
+                <img src="Frame+card/IMG_5682.jpeg" alt="Frame 3">
+            </div>
+            <div class="frame">
+                <img src="Frame+card/IMG_5683.jpeg" alt="Frame 4">
+            </div>
+            <div class="frame">
+                <img src="Frame+card/IMG_5684.jpeg" alt="Frame 5">
+            </div>
+            <div class="decorate">
+                <img src="Frame+card/IMG_5687.png" alt="Decor 1">
+            </div>
+            <div class="decorate">
+                <img src="Frame+card/IMG_5690.png" alt="Decor 2">
+            </div>
+            <div class="decorate">
+                <img src="Frame+card/IMG_5697.png" alt="Decor 3">
+            </div>
+
+            <a class="prev" onclick="plusFrame(-1)">&#10094;</a>
+            <div class=frameText>choose frame</div>
+            <a class="next" onclick="plusFrame(1)">&#10095;</a>
+            <a class="prev2" onclick="plusDecor(-1)">&#10094;</a>
+            <div class=decorateText>choose decoration</div>
+            <a class="next2" onclick="plusDecor(1)">&#10095;</a>
+
+            <form name='submit-to-google-sheet' id="tanzaku" class="Form">
+                <h2 class="titlecard"> Make a wish! </h2>
+                <div class="inputbox">
+                    <input name="wish" type="text" id="wish" placeholder="Your wishes" required />
+                </div>
+                <div class="inputbox">
+                    <input name="name" type="text" id="name" placeholder="Your name" required />
+                </div>
+                <input type="submit" name="submit" class="confirm_btn" onclick="closePopup()">
+            </form>
+        </div>
+        <div class="seeOther" id="otherWish">
+            <button id="randoms" class="random"> refresh </button>
+            <div id="wishess" class="wishes"></div>
+        </div>
+
+        
+        <script src="MakeWish-script.js"></script>
+
+        <!-- see other wish -->
+        
+
+
+        <!-- <img src="" class="bg_bottom" onclick="cardopen()" alt = "..." /> -->
+    </div>
+</body>
+
+</html>
