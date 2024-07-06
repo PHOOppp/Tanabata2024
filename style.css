@@ -12,68 +12,62 @@
     unicode-range: U+E00–E7F;
 }
 
-
 html {
     height: 100%;
 }
 
-body {
-    background-image:
-        url(/Users/phoodit/Library/CloudStorage/OneDrive-KamnoetvidyaScienceAcademy/Tanabata2024/final/foreframe.png),
-        url(/Users/phoodit/Library/CloudStorage/OneDrive-KamnoetvidyaScienceAcademy/Tanabata2024/final/moon_animated-ezgif.com-crop.gif),
-        url(/Users/phoodit/Library/CloudStorage/OneDrive-KamnoetvidyaScienceAcademy/Tanabata2024/final/bamboofront_animated.gif),
-        url(/Users/phoodit/Library/CloudStorage/OneDrive-KamnoetvidyaScienceAcademy/Tanabata2024/final/backframe.png),
-        url(/Users/phoodit/Library/CloudStorage/OneDrive-KamnoetvidyaScienceAcademy/Tanabata2024/final/bambooback.png),
-        url(/Users/phoodit/Library/CloudStorage/OneDrive-KamnoetvidyaScienceAcademy/Tanabata2024/final/sea_animated.gif),
-        url(/Users/phoodit/Library/CloudStorage/OneDrive-KamnoetvidyaScienceAcademy/Tanabata2024/final/background.png);
-    background-size: cover, 25%, cover, cover, cover,cover,cover;
-    background-position: top, right top, top, top, top,top,top;
-    background-attachment: scroll,fixed,scroll,scroll,scroll,scroll,scroll;
-    height: 243vh;
-    margin: 0;
-    color: #372791;
+body{
+    background:
+    url(final/written.png),
+    url(final/foreframe.png),
+    url(final/clouds_animated.gif),
+    url(final/bamboofront_animated.gif),
+    url(final/bridgeandlovers.png),
+    url(final/backframe.png),
+    url(final/bambooback.png),
+    url(final/sea_animated.gif),
+    url(final/moon_animated.gif),
+    url(final/background.png);
+    background-size: cover,cover,cover,cover,cover,cover,cover,cover,cover,cover;
     background-repeat: no-repeat;
-    z-index: 1;
+    background-position:top,top,top,top,top,top,top,top,100% 40%,top;
+    height: 120vh;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .container {
     width: 100%;
     height: 100%;
     text-align: center;
-    flex-direction: column;
+    display: flex;
+    flex-direction: row;
 }
 
+
 .btn {
-    display: inline;
-    margin-top: 300px;
-    width: 250px;
+    position: absolute;
+    margin-top: 130%;
+    left: 20%;
+    width: 30%;
     border: 0;
     background: none;
     cursor: pointer;
-    z-index: 100;
+    z-index: 1;
 }
 
 .story_btn {
-    display: inline;
-    width: 250px;
+    position: absolute;
+    margin-top: 130%;
+    right: 20%;
+    width: 30%;
     border: 0;
     background: none;
     cursor: pointer;
+    z-index: 1;
 }
 
-.popup {
-    width: 4500px;
-    text-align: center;
-    background-color: #d1585f;
-    border-radius: 15px;
-    top: 30%;
-    left: 50%;
-    position: fixed;
-    transform: translate(-50%, -50%);
-    padding: 10px 30px 30px;
-    visibility: hidden;
-    z-index: 102;
-}
+
 
 .titlecard {
     color: white;
@@ -210,14 +204,6 @@ input[type=text] {
     visibility: visible;
 }
 
-.bg_bottom {
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    width: 100%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-}
 
 .random {
     margin-top: 2300px;
@@ -402,39 +388,7 @@ h4 {
     text-align: center;
 }
 
-.wishButton {
-    background: none;
-    margin-left: auto;
-    margin-right: auto;
-    border-width: 0;
-    border-style: solid;
-    cursor: pointer;
-}
 
-
-
-.randomWish {
-    height: 30%;
-    width: 60%;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 50px;
-    display: block;
-    background-color: #a1e9ff;
-}
-
-.Rand {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 80px;
-    height: 20px;
-}
-
-
-.Rand.show {
-    visibility: visible;
-}
 
 /* a{
     color:white;
